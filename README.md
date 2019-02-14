@@ -3,7 +3,7 @@ Sample code which implimented a drag and drop in react JS.
 
 Usage:
 
-Download
+  Download the repository 
 
-  npm install
-  npm start
+    npm install
+    npm start

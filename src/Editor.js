@@ -37,6 +37,9 @@ class Editor extends React.Component {
         )
     }
 
+    /**
+     * Drag start event handler - to set the state
+     */
     onDragStart = (event, type)=>{
         this.setState({
             isDragging: true,
@@ -44,16 +47,21 @@ class Editor extends React.Component {
         })
     }
 
+     /**
+     * Drop event handler, to add the droped item
+     */
     onDrop = (event) =>{
         this.setState({
-            itemArray :  [ ...this.state.itemArray,  {left: event.clientX,
-            top: event.clientY, type: this.state.type }],
+            itemArray :  [ ...this.state.itemArray,  {left: event.clientX, 
+                                                      top: event.clientY, type: this.state.type }],
             isDragging: false
         })
     }
 
+    /**
+     * The image list react elements
+     */
     imgList = ()=>{
-        debugger;
         let list =  this.state.itemArray.map((item)=>{
             if(item.type === 'SUN'){
                 return <img src = {sun} width = "50px" height = "50px" 

@@ -70,6 +70,7 @@ class Editor extends React.Component {
                 return <img src = {cloud} width = "50px" height = "50px" alt="cloud"
                     style = {{left: item.left - 25, top: item.top -25, position: 'fixed'}} />
             }
+            return undefined;
         });
     }
 }

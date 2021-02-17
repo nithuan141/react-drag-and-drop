@@ -61,18 +61,16 @@ class Editor extends React.Component {
     /**
      * The image list react elements
      */
-    imgList = ()=>{
-        let list =  this.state.itemArray.map((item)=>{
-            if(item.type === 'SUN'){
+    imgList = () => {
+        return  this.state.itemArray.map((item)=>{
+            if(item.type === 'SUN') {
                 return <img src = {sun} width = "50px" height = "50px"  alt="sun"
                     style = {{left: item.left - 25, top: item.top -25, position: 'fixed'}} />
-            }else if(item.type === 'CLOUD'){
+            } else if(item.type === 'CLOUD') {
                 return <img src = {cloud} width = "50px" height = "50px" alt="cloud"
                     style = {{left: item.left - 25, top: item.top -25, position: 'fixed'}} />
             }
-        })
-
-        return list;
+        });
     }
 }
 

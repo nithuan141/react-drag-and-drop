@@ -17,10 +17,10 @@ class Editor extends React.Component {
         return(
              <div>
                  <div  draggable={true} onDragStart = { e => this.onDragStart(e, 'SUN')} >
-                     <img src = {sun} width = "50px" height = "50px" />
+                     <img src = {sun} width = "50px" height = "50px" alt="sun"/>
                  </div>
                  <div  draggable={true} onDragStart = { e => this.onDragStart(e, 'CLOUD')} >
-                    <img src = {cloud} width = "50px" height = "50px" />
+                    <img src = {cloud} width = "50px" height = "50px" alt="cloud"/>
                  </div>
                  <div className="container">
                  <div className="navi"
@@ -30,7 +30,7 @@ class Editor extends React.Component {
                         {this.imgList()}
                     </div>
                  <div className="infoi">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Sun-soleil2.svg" />
+                     <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Sun-soleil2.svg" alt="info" />
                  </div>
                  </div>
              </div>
@@ -64,10 +64,10 @@ class Editor extends React.Component {
     imgList = ()=>{
         let list =  this.state.itemArray.map((item)=>{
             if(item.type === 'SUN'){
-                return <img src = {sun} width = "50px" height = "50px" 
+                return <img src = {sun} width = "50px" height = "50px"  alt="sun"
                     style = {{left: item.left - 25, top: item.top -25, position: 'fixed'}} />
             }else if(item.type === 'CLOUD'){
-                return <img src = {cloud} width = "50px" height = "50px" 
+                return <img src = {cloud} width = "50px" height = "50px" alt="cloud"
                     style = {{left: item.left - 25, top: item.top -25, position: 'fixed'}} />
             }
         })

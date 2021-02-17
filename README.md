@@ -8,6 +8,6 @@ Usage:
 
     npm install
   
-  Then run npm start to start the app, then check: http://localhost:30000
+  Then run npm start to start the app  and  check: http://localhost:30000
   
     npm start
